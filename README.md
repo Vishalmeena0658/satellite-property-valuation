@@ -58,45 +58,80 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 ▶️ How to Run the Project
+
 Step 1: Exploratory Data Analysis (EDA)
+
 EDA_Satellite_Property_Valuation.ipynb
+
 Data quality checks
+
 Correlation analysis
+
 Spatial visualization
+
 Satellite image exploration
 
+
 Step 2: Data Preprocessing
+
 preprocessing.ipynb
+
 Log transformation of target variable
+
 Removal of non-informative columns (ID,Date , ZIP code)
+
 Feature selection
+
 Data preparation for modeling
 
+
 Step 3: Baseline Model (Tabular Only)
+
 model_training.ipynb
+
 Trains XGBoost regression
+
 Uses only tabular property features
+
 Serves as baseline for comparison
 
+
 Step 4: Final Fusion Model (Main Model)
+
 Satellite_Property_Valuation.ipynb
+
 Extracts 2048-d image embeddings using Inception-V3
+
 Generates 40-d tabular embeddings
+
 Applies feature-level fusion
+
 Trains neural network (512 → 64 → 1)
+
 Evaluates RMSE and R²
+
 Generates Grad-CAM visualizations
 
+
 🧠 Model Architecture
+
 Satellite Image → Inception-V3 → 2048-d Image Embedding
+
 Tabular Features → Dense Layer → 40-d Tabular Embedding
+
 → Feature Concatenation (F+I Fusion)
+
 → FC (512 → 64 → 1)
+
 → Predicted Property Price
 
+
 📊 Evaluation Metrics
+
 Mean Absolute Error (MAE)
+
 Root Mean Squared Error (RMSE)
+
 R² Score
 
 Baseline and fusion models are compared to analyze the impact of satellite imagery.
@@ -105,3 +140,4 @@ Baseline and fusion models are compared to analyze the impact of satellite image
 Grad-CAM visualizations highlight spatial regions influencing predictions
 Shows differences between low-price and high-price properties
 Improves trust and explainability of the fusion model
+
