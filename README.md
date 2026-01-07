@@ -47,7 +47,7 @@ A **pre-trained Inception-V3 CNN** extracts spatial features from satellite imag
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/your-username/satellite-property-valuation.git
+git clone https://github.com/Vishalmeena@0658/satellite-property-valuation.git
 cd satellite-property-valuation
 
 2️⃣ Create a virtual environment (recommended)
@@ -131,6 +131,3 @@ Fine-tuning CNN layers
 Higher-resolution satellite images
 
 Advanced fusion strategies
-
-Integration of additional spatial data sources
----
