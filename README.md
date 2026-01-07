@@ -47,60 +47,44 @@ A **pre-trained Inception-V3 CNN** extracts spatial features from satellite imag
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/Vishalmeena@0658/satellite-property-valuation.git
+git clone https://github.com/Vishalmeena0658/satellite-property-valuation.git
 cd satellite-property-valuation
 
 2️⃣ Create a virtual environment (recommended)
 python -m venv venv
-venv\Scripts\activate           # Windows
+venv\Scripts\activate         
 
 3️⃣ Install dependencies
 pip install -r requirements.txt
 
 ▶️ How to Run the Project
 Step 1: Exploratory Data Analysis (EDA)
-
 EDA_Satellite_Property_Valuation.ipynb
 Data quality checks
-
 Correlation analysis
-
 Spatial visualization
-
 Satellite image exploration
 
 Step 2: Data Preprocessing
 preprocessing.ipynb
 Log transformation of target variable
-
-Removal of non-informative columns (ID, ZIP code)
-
+Removal of non-informative columns (ID,Date , ZIP code)
 Feature selection
-
 Data preparation for modeling
 
 Step 3: Baseline Model (Tabular Only)
-
-Satellite_Property_Valuation.ipynb
+model_training.ipynb
 Trains XGBoost regression
-
 Uses only tabular property features
-
 Serves as baseline for comparison
 
 Step 4: Final Fusion Model (Main Model)
-
 Satellite_Property_Valuation.ipynb
 Extracts 2048-d image embeddings using Inception-V3
-
 Generates 40-d tabular embeddings
-
 Applies feature-level fusion
-
 Trains neural network (512 → 64 → 1)
-
 Evaluates RMSE and R²
-
 Generates Grad-CAM visualizations
 
 🧠 Model Architecture
@@ -109,25 +93,15 @@ Tabular Features → Dense Layer → 40-d Tabular Embedding
 → Feature Concatenation (F+I Fusion)
 → FC (512 → 64 → 1)
 → Predicted Property Price
+
 📊 Evaluation Metrics
 Mean Absolute Error (MAE)
-
 Root Mean Squared Error (RMSE)
-
 R² Score
 
 Baseline and fusion models are compared to analyze the impact of satellite imagery.
 
 🔍 Model Interpretability
 Grad-CAM visualizations highlight spatial regions influencing predictions
-
 Shows differences between low-price and high-price properties
-
 Improves trust and explainability of the fusion model
-
-🚀 Future Scope
-Fine-tuning CNN layers
-
-Higher-resolution satellite images
-
-Advanced fusion strategies
