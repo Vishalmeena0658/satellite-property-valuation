@@ -1,0 +1,44 @@
+# ===============================
+# Ignore datasets & large files
+# ===============================
+data/
+*.xlsx
+*.parquet
+
+# Image & embedding files
+*.npy
+*.npz
+*.pt
+*.pth
+
+# Satellite images
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+# ===============================
+# Jupyter Notebook
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# Python cache
+# ===============================
+__pycache__/
+*.pyc
+
+# ===============================
+# Virtual environment
+# ===============================
+venv/
+env/
+
+# ===============================
+# OS / Editor files
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
